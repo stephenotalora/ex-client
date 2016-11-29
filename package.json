@@ -1,0 +1,41 @@
+{
+  "name": "ex-client",
+  "version": "0.0.1",
+  "description": "SEO ServerSide Rendering Client App",
+  "main": "index.js",
+  "scripts": {
+    "server-dev": "nodemon --inspect .",
+    "server-dev-prod": "nodemon .",
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephenotalora/ex-client.git"
+  },
+  "keywords": [
+    "React",
+    "express",
+    "express",
+    "serverside-rendering"
+  ],
+  "author": "Jonathan S. Otalora",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stephenotalora/ex-client/issues"
+  },
+  "homepage": "https://github.com/stephenotalora/ex-client#readme",
+  "dependencies": {
+    "app-root-dir": "^1.0.2",
+    "async": "^2.1.4",
+    "bluebird": "^3.4.6",
+    "express": "^4.14.0",
+    "morgan": "^1.7.0",
+    "node-toolbox": "0.0.1",
+    "serve-static": "^1.11.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.11.1",
+    "eslint-config-cumul8": "^4.11.0"
+  }
+}
