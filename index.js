@@ -1,8 +1,7 @@
 /* eslint-disable no-console */
 const app = require('express')();
 const async = require('async');
-const initMiddleware = require('./src/middleware');
-// const routes = require('./routes')(app);
+const initMiddleware = require('./middleware');
 
 module.exports = exports = {};
 

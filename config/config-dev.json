@@ -1,19 +1,11 @@
 {
 	"server": {
 		"host": "127.0.0.1",
-		"port": 8080,
-		"settings": {
-			"parsers": {
-				"urlencoded": {
-					"extended": false
-				}
-			}
-		}
+		"port": 8080
 	},
 
-	"persistence": {
-		"host": "mongodb://localhost",
-		"port": 27017,
-		"db": "test"
+	"webpack": {
+		"host": "127.0.0.1",
+		"port": 8180
 	}
 }

@@ -11,11 +11,10 @@
   * @param  {function} callback - the async waterfall callback
   */
 module.exports = exports = (app, {server}, callback) => {
-	const {host, port, settings} = server;
+	const {host, port} = server;
 
 	app.set('domain', host);
 	app.set('port', port);
-	app.set('settings', settings);
 
 	callback(null);
 };

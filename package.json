@@ -4,8 +4,7 @@
   "description": "SEO ServerSide Rendering Client App",
   "main": "index.js",
   "scripts": {
-    "server-dev": "nodemon --inspect .",
-    "server-dev-prod": "nodemon .",
+    "server-dev": "node node_modules/babel-cli/bin/babel-node.js .",
     "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -30,12 +29,27 @@
     "async": "^2.1.4",
     "bluebird": "^3.4.6",
     "express": "^4.14.0",
+    "http-proxy": "^1.15.2",
     "morgan": "^1.7.0",
     "node-toolbox": "0.0.1",
-    "serve-static": "^1.11.1"
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "serve-static": "^1.11.1",
+    "shallow-compare": "^1.2.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
     "eslint": "^3.11.1",
-    "eslint-config-cumul8": "^4.11.0"
+    "eslint-config-cumul8": "^4.11.0",
+    "react-hot-loader": "^1.3.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-hot-middleware": "^2.13.2"
   }
 }

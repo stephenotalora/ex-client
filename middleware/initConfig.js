@@ -2,7 +2,7 @@
  * @author Jonathan S. Otalora
  * All rights reserved
  */
-const {loadConfig} = require('node-utils')();
+const {loadConfig} = require('node-toolbox')();
 
 /**
  * initializeConfig
