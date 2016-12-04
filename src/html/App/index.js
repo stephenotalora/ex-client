@@ -5,6 +5,7 @@ import ReactDOMServer from 'react-dom/server';
 import Root from './Root';
 import Static from './Static';
 
+// TODO: replace the following two checks with reducers!
 if (typeof window !== 'undefined') {
 	ReactDOM.render(
 		React.createElement(Root),
