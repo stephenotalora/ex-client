@@ -7,26 +7,27 @@ module.exports = {
 		app: [
 			'webpack-hot-middleware/client?path=http://localhost:8080/__webpack_hmr',
 			'webpack/hot/only-dev-server',
-			path.resolve(__dirname, '../src/html/app')
+			path.resolve(__dirname, '../src/html/App')
 		]
-	},
-	output: {
-		path: path.resolve(__dirname, './../public/static/'),
-		filename: 'bundle.js',
-		publicPath: `http://localhost:8080/static/`
 	},
 	module: {
 		loaders: [
 			{
-				test: /\.js?$/,
+				test: /\.js|.jsx?$/,
 				exclude: /node_modules/,
 				loaders: ['react-hot', 'babel'],
 				include: [path.resolve(__dirname, "..", "src")]
 			}
 		]
 	},
-	progress: true,
+	node: {fs: "empty"},
+	output: {
+		path: path.resolve(__dirname, './../public/static/'),
+		filename: 'bundle.js',
+		publicPath: `http://localhost:8080/static/`
+	},
 	plugins: [
 		new webpack.HotModuleReplacementPlugin()
-	]
+	],
+	progress: true
 };

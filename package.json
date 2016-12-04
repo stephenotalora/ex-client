@@ -34,6 +34,7 @@
     "node-toolbox": "0.0.1",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
+    "react-hot-loader": "^1.3.1",
     "serve-static": "^1.11.1",
     "shallow-compare": "^1.2.0"
   },

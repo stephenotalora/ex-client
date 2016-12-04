@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import shalloCompare from 'shallow-compare';
+import Root from './Root';
 
 export default class Static extends Component {
 	static displayName = "Static";
 
 	shouldComponentUpdate (nextProps, nextState) {
-		return shalloCompare(this, nextProps, nextState);
+		return false;
 	}
 
 	render () {
@@ -16,7 +16,7 @@ export default class Static extends Component {
 					<title>Loading ...</title>
 				</head>
 				<body>
-					<div id="app" />
+					<Root />
 					<script src="/static/bundle.js" />
 				</body>
 			</html>

@@ -1,23 +1,28 @@
+/* eslint-disable no-process-env */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {renderToString} from 'react-dom/server';
+import ReactDOMServer from 'react-dom/server';
+import Root from './Root';
 import Static from './Static';
 
-if (module.hot) {
-	require('react-hot-loader/Injection').RootInstanceProvider.injectProvider({
-		getRootInstances () {
-			return [
-				ReactDOM.render(
-					React.createElement(Static),
-					document.getElementById('app')
-				)
-			];
-		}
+if (typeof window !== 'undefined') {
+	ReactDOM.render(
+		React.createElement(Root),
+		document.getElementById('root')
+	);
+}
+
+if ((!process.env.NODE_ENV || process.env.NODE_ENV === 'develop') && module.hot) {
+	module.hot.accept('./Root', () => {
+		ReactDOM.render(
+			React.createElement(Root),
+			document.getElementById('root')
+		);
 	});
 }
 
 module.exports = exports = () => {
-	return renderToString(
+	return ReactDOMServer.renderToString(
 		React.createElement(Static)
 	);
 };
