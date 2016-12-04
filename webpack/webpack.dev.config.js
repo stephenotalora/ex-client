@@ -2,7 +2,9 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-	devtool: 'source-map',
+	// cheap-module-eval-source-map or eval
+	devtool: 'eval',
+
 	entry: {
 		app: [
 			'webpack-hot-middleware/client?path=http://localhost:8080/__webpack_hmr',
@@ -10,15 +12,14 @@ module.exports = {
 			path.resolve(__dirname, '../src/html/App')
 		]
 	},
+
 	module: {
-		loaders: [
-			{
-				test: /\.js|.jsx?$/,
-				exclude: /node_modules/,
-				loaders: ['react-hot', 'babel'],
-				include: [path.resolve(__dirname, "..", "src")]
-			}
-		]
+		loaders: [{
+			test: /\.js|.jsx?$/,
+			exclude: /node_modules/,
+			loaders: ['react-hot', 'babel'],
+			include: [path.resolve(__dirname, "..", "src")]
+		}]
 	},
 	node: {fs: "empty"},
 	output: {

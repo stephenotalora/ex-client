@@ -9,10 +9,9 @@ export default class Root extends Component {
 	}
 
 	render () {
-		const id = Root.displayName.toLowerCase();
 
 		return (
-			<div id={id}>
+			<div>
 				Hello World!
 			</div>
 		);

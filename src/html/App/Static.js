@@ -16,7 +16,9 @@ export default class Static extends Component {
 					<title>Loading ...</title>
 				</head>
 				<body>
-					<Root />
+					<div id="app">
+						<Root />
+					</div>
 					<script src="/static/bundle.js" />
 				</body>
 			</html>

@@ -5,25 +5,18 @@ import ReactDOMServer from 'react-dom/server';
 import Root from './Root';
 import Static from './Static';
 
-// TODO: replace the following two checks with reducers!
-if (typeof window !== 'undefined') {
+const isServerRendering = typeof window === 'undefined';
+
+if (!isServerRendering) {
+	// TODO: replace with reducers
 	ReactDOM.render(
 		React.createElement(Root),
-		document.getElementById('root')
+		document.getElementById('app')
 	);
 }
 
-if ((!process.env.NODE_ENV || process.env.NODE_ENV === 'develop') && module.hot) {
-	module.hot.accept('./Root', () => {
-		ReactDOM.render(
-			React.createElement(Root),
-			document.getElementById('root')
-		);
-	});
-}
-
 module.exports = exports = () => {
-	return ReactDOMServer.renderToString(
+	return ReactDOMServer.renderToStaticMarkup(
 		React.createElement(Static)
 	);
 };
